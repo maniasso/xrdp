@@ -1,0 +1,1 @@
+docker run --shm-size 2g -d --hostname infbastion01 --name infbastion01 -v /etc/hosts:/etc/hosts -v /docker/bastion01/conf/pam_duo.conf:/etc/duo/pam_duo.conf -v /docker/bastion01/conf/pam_duo.conf:/docker/bastion01/conf/login_duo.conf -v /etc/passwd:/etc/passwd -v /etc/group:/etc/group -v /etc/shadow:/etc/shadow -v /home:/home -p 3389:3389 --restart always xrdp:1.0
